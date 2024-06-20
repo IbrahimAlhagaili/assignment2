@@ -49,14 +49,14 @@ const RegistrationForm = () => {
  
   return (
     <div className="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl mb-4">Registeration Form</h2>
+      <h2 className="text-2xl mb-4">Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             htmlFor="fullName"
             className="Block text-sm font-medium text-gray-600"
           >
-            First Name & last Name
+            First Name & Last Name
           </label>
           <input
             type="text"
