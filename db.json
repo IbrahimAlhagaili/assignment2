@@ -1,13 +1,39 @@
 {
   "users": [
     {
-      "id": "a277",
-      "firstName": "Ibrahim",
-      "lastName": "Alhagaili",
-      "phoneNumber": "5874398844",
-      "userName": "aa",
-      "email": "ibrahimalhagaili@gmail.com",
-      "password": "aa"
+      "id": "be41",
+      "fullName": "John Doe",
+      "dateOfBirth": "1999-02-22",
+      "currentGrade": "55",
+      "password": ""
+    },
+    {
+      "id": "1c5e",
+      "fullName": "Jane Doe",
+      "dateOfBirth": "2002-03-12",
+      "currentGrade": "99",
+      "password": ""
+    },
+    {
+      "id": "aa16",
+      "fullName": "William Saphey",
+      "dateOfBirth": "2005-05-11",
+      "currentGrade": "82",
+      "password": ""
+    },
+    {
+      "id": "3857",
+      "fullName": "Jack Barsky",
+      "dateOfBirth": "2001-11-11",
+      "currentGrade": "78",
+      "password": ""
+    },
+    {
+      "id": "691d",
+      "fullName": "Timmy Hortons",
+      "dateOfBirth": "2007-01-06",
+      "currentGrade": "96",
+      "password": ""
     }
   ]
 }
