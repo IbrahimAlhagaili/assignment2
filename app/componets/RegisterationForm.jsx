@@ -1,55 +1,56 @@
-'use client'
-import React, {useState} from 'react'
- 
+"use client";
+import React, { useState } from "react";
+
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({
-        fullName: '',
-        dateOfBirth: '',
-        password: ''
-    })
-    const [message, setMessage] = useState('')
- 
-    const handlInputChange = (e) => {
-        console.log(e)
-        const {name, value} = e.target
-        console.log("Name:",name, "Value:",value)
+  const [formData, setFormData] = useState({
+    fullName: "",
+    dateOfBirth: "",
+    currentGrade: null,
+    password: "",
+  });
+  const [message, setMessage] = useState("");
+
+  const handlInputChange = (e) => {
+    console.log(e);
+    const { name, value } = e.target;
+    console.log("Name:", name, "Value:", value);
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    //e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setMessage("User created successfully");
+        alert("User created successfully");
         setFormData({
-            ...formData,
-            [name]: value
-        })
+          firstName: "",
+          lastName: "",
+          password: "",
+        });
+      } else {
+        setMessage("Failed to register a user");
+        alert("Failed to register a user");
+      }
+    } catch (error) {
+      setMessage("Failed to register a user");
+      alert("Failed to register a user");
     }
- 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('http://localhost:5000/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            if(response.ok){
-                setMessage('User created successfully')
-                setFormData({
-                    firstName: '',
-                    lastName: '',
-                    password: ''
-                })
-            } else {
-                setMessage('Failed to register a user')
-            }
-           
-        } catch (error) {
-            setMessage('Failed to register a user')
-        }
-    }
- 
-   
- 
+  };
+
   return (
     <div className="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl mb-4">Form</h2>
+      <h2 className="text-2xl mb-4">Register a student</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
@@ -68,7 +69,6 @@ const RegistrationForm = () => {
             required
           />
         </div>
-
 
         <div className="mb-4">
           <label
@@ -100,6 +100,7 @@ const RegistrationForm = () => {
             name="currentGrade"
             className="mt-1 p-2 w-full border border-gray-300 rounded-md"
             value={formData.currentGrade}
+            onChange={handlInputChange}
             min="0"
             max="100"
             step="0.1"
@@ -118,10 +119,10 @@ const RegistrationForm = () => {
       </form>
 
       {message && (
-        <div className="mt-4 text-center text-red-500">{message}</div>
+        <div className={`mt-4 text-center ${message.toLowerCase().includes("success") ? 'text-green-500' : 'text-red-500'}`}>{message}</div>
       )}
     </div>
   );
-}
- 
-export default RegistrationForm
+};
+
+export default RegistrationForm;
