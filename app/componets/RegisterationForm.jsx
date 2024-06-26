@@ -1,5 +1,19 @@
 'use client'
 import React, {useState} from 'react'
+
+
+const Navbar = () => {
+  return (
+    <nav className="bg-gray-800 p-4 text-white">
+      <div className="container mx-auto">
+        <h1 className="text-2xl">School Name</h1>
+        {/* Add navigation links as needed */}
+      </div>
+    </nav>
+  );
+};
+
+
  
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -123,5 +137,6 @@ const RegistrationForm = () => {
     </div>
   );
 }
+
  
 export default RegistrationForm
