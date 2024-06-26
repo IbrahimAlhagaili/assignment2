@@ -6,14 +6,21 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4 text-white">
       <div className="container mx-auto">
-        <h1 className="text-2xl">School Name</h1>
-        {/* Add navigation links as needed */}
+        <h1 className="text-2xl">Made Up School</h1>
+        {/* Add navigation links?*/}
       </div>
     </nav>
   );
 };
 
-
+const Footer = () => {
+  return (
+    <footer>
+      <p>Made Up School</p>
+      <p>Contact Information</p>
+    </footer>
+  );
+};
  
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -138,5 +145,5 @@ const RegistrationForm = () => {
   );
 }
 
- 
+
 export default RegistrationForm
