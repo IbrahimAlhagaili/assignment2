@@ -1,6 +1,6 @@
 import RegisterationForm from "./componets/RegisterationForm";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./componets/RegisterationForm";
+import Footer from "./componets/RegisterationForm";
 
 export default function Home() {
   return (
