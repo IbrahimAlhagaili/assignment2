@@ -1,8 +1,8 @@
 
 'use client'
 import { useEffect, useState } from 'react';
-import { StudentsList } from "./componets/StudentsList";
-import RegisterationForm from "./componets/RegisterationForm";
+import { StudentsList } from "./components/StudentsList";
+import RegistrationForm from "./components/RegisterationForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -24,7 +24,7 @@ const Home = () => {
       <Navbar/>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <StudentsList students={students}/>
-      <RegisterationForm/>
+      <RegistrationForm/>
     </main>
     <Footer/>
     </div>
