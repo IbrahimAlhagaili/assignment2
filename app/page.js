@@ -1,4 +1,4 @@
-import RegistrationForm from "./componets/RegistrationForm";
+import RegistrationForm from "./components/RegistrationForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
