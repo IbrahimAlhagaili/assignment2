@@ -1,8 +1,10 @@
 
 'use client'
 import { useEffect, useState } from 'react';
-import RegisterationForm from "./componets/RegisterationForm";
 import { StudentsList } from "./componets/StudentsList";
+import RegisterationForm from "./componets/RegisterationForm";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Home = () => {
   const [students, setStudents] = useState([]);
@@ -18,10 +20,14 @@ const Home = () => {
   }, []);
 
   return (
+    <div>
+      <Navbar/>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <StudentsList students={students}/>
       <RegisterationForm/>
     </main>
+    <Footer/>
+    </div>
   );
 };
 
