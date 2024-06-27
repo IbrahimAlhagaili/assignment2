@@ -31,6 +31,7 @@ const RegistrationForm = () => {
         },
         body: JSON.stringify(formData),
       });
+      //Display message for successful form entry
       if (response.ok) {
         setMessage("Student Added Successfully");
         alert("Student Added Successfully");
@@ -38,6 +39,8 @@ const RegistrationForm = () => {
           firstName: "",
           lastName: ""
         });
+        //Display message for unsuccessful data entry
+        
       } else {
         setMessage("Failed to register the student");
         alert("Failed to register the student");

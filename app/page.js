@@ -1,11 +1,13 @@
 
 'use client'
+//Importing necessary functions and states
 import { useEffect, useState } from 'react';
 import { StudentsList } from "./components/StudentsList";
 import RegistrationForm from "./components/RegisterationForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+//Async function that retrieves information from JSON file
 const Home = () => {
   const [students, setStudents] = useState([]);
 

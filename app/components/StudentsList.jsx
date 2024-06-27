@@ -1,4 +1,6 @@
 "use client";
+
+//Import of functions/states 
 import Student from "./Student";
 import React, { useState } from "react";
 
