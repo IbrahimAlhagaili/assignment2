@@ -3,7 +3,7 @@
 //Importing necessary functions and states
 import { useEffect, useState } from 'react';
 import { StudentsList } from "./components/StudentsList";
-import RegistrationForm from "./components/RegisterationForm";
+import RegistrationForm from "./components/RegistrationForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
