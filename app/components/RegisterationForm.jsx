@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
+//Function to set data variables saved from form input
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -20,7 +21,6 @@ const RegistrationForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    //e.preventDefault();
     try {
       const response = await fetch("http://localhost:5000/users", {
         method: "POST",
@@ -30,8 +30,8 @@ const RegistrationForm = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        setMessage("Student successfully");
-        alert("Student successfully");
+        setMessage("Student Added Successfully");
+        alert("Student Added Successfully");
         setFormData({
           firstName: "",
           lastName: ""
@@ -53,7 +53,7 @@ const RegistrationForm = () => {
         <div className="mb-4">
           <label
             htmlFor="fullName"
-            className="Block text-sm font-medium text-gray-600"
+            className="Block text-lg font-medium text-blue-500"
           >
             First Name & Last Name
           </label>
@@ -71,7 +71,7 @@ const RegistrationForm = () => {
         <div className="mb-4">
           <label
             htmlFor="dateOfBirth"
-            className="Block text-sm font-medium text-gray-600"
+            className="Block text-lg font-medium text-blue-500"
           >
             Date Of Birth
           </label>
@@ -88,7 +88,7 @@ const RegistrationForm = () => {
         <div className="mb-4">
           <label
             htmlFor="currentGrade"
-            className="block text-sm font-medium text-gray-600"
+            className="Block text-lg font-medium text-blue-500"
           >
             Current Grade (%)
           </label>
