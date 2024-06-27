@@ -131,8 +131,7 @@ const RegistrationForm = () => {
         <div className="mb-4">
           <button
             type="submit"
-            className="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600"
-          >
+            className="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600">
             Register
           </button>
         </div>
