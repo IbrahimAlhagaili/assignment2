@@ -10,6 +10,7 @@ const RegistrationForm = () => {
   });
   const [message, setMessage] = useState("");
 
+  //Function that handles the name input from form
   const handlInputChange = (e) => {
     console.log(e);
     const { name, value } = e.target;
@@ -20,6 +21,7 @@ const RegistrationForm = () => {
     });
   };
 
+  //Function for local server and for updating data in JSON file
   const handleSubmit = async (e) => {
     try {
       const response = await fetch("http://localhost:5000/users", {
@@ -47,6 +49,8 @@ const RegistrationForm = () => {
   };
 
   return (
+
+  //Functions to handle for inputs
     <div className="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl mb-4">Register a student</h2>
       <form onSubmit={handleSubmit}>
