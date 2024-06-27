@@ -5,8 +5,7 @@ const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     dateOfBirth: "",
-    currentGrade: null,
-    password: "",
+    currentGrade: null
   });
   const [message, setMessage] = useState("");
 
@@ -31,20 +30,19 @@ const RegistrationForm = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        setMessage("User created successfully");
-        alert("User created successfully");
+        setMessage("Student successfully");
+        alert("Student successfully");
         setFormData({
           firstName: "",
-          lastName: "",
-          password: "",
+          lastName: ""
         });
       } else {
-        setMessage("Failed to register a user");
-        alert("Failed to register a user");
+        setMessage("Failed to register the student");
+        alert("Failed to register the student");
       }
     } catch (error) {
-      setMessage("Failed to register a user");
-      alert("Failed to register a user");
+      setMessage("Failed to register the student");
+      alert("Failed to register the student");
     }
   };
 

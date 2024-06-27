@@ -1,9 +1,9 @@
+//Function to the navigation or top bar
 const Navbar = () => {
     return (
-      <nav className="bg-gray-800 p-4 text-white">
+      <nav className="bg-gray-100 p-4 text-center text-cyan-300">
         <div className="container mx-auto">
-          <h1 className="text-2xl">Generic School</h1>
-          {/* Add navigation links as needed */}
+          <h1 className="text-2xl text-slate-500">Generic School</h1>
         </div>
       </nav>
     );

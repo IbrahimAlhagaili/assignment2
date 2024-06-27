@@ -2,12 +2,14 @@
 import Student from "./Student";
 import React, { useState } from "react";
 
+//Iterqates through the available student objects and stops if the field becomes null
 export const StudentsList = ({ students }) => {
   if (!students || students.length === 0) {
     console.log("std: "+ students);
     return <p>No students available</p>;
   }
 
+  //Maps the list of students
   return (
     <>
       <h2 className="text-2xl mb-4">Students List:</h2>
